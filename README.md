@@ -153,29 +153,29 @@ dtypes: int64(3)
 Rata-rata harga tempat wisata per kategori bervariasi dari Rp 0 yang berarti gratis sampai Rp 800.000 dengan kategori paling mahal yaitu bahari dan taman hiburan.
 
 Gambar 1. Rata-rata harga tempat wisata per kategori
-
+![Category Mean](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/cat-price-mean.png?raw=true)
 Gambar 2. Jumlah _rating_ 1-5 tempat wisata per kategori
-
+![Category Rating Count](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/cat-rating-count.png?raw=true)
 _Rating_ tempat wisata dan _rating_ dari user memiliki perbedaan rata-rata.
 
 Gambar 3. Rata-rata _rating_ tempat wisata dan _rating_ dari user
-
+![Category Rating with User](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/cat-rating-w-user.png?raw=true)
 Kategori tempat wisata yang paling banyak dikunjungi yaitu tempat wisata, budaya dan cagar alam.
-
+![Category Visited User](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/cat-visited-user.png?raw=true)
 Gambar 4. Jumlah pengunjung tempat wisata per kategori
 
 Rata-rata tempat wisata dengan harga tertinggi yaitu Jakarta.
-
+![City Price Mean](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/city-price-mean.png?raw=true)
 Gambar 5. Rata-rata harga tempat wisata per kota
-
+![City Rating Count](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/city-rating-count.png?raw=true)
 Gambar 6. Jumlah _rating_ 1-5 tempat wisata per kota
 
 Kota dengan pengunjung tempat wisata tertinggi yaitu Bandung dan Yogyakarta.
-
+![City Visited User](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/cat-visited-user.png?raw=true)
 Gambar 7. Jumlah pengunjung tempat wisata per kota
 
 Harga tempat wisata bervariasi, fitur harga dapat di-augmentasi untuk menghasilkan fitur baru yaitu Budget.
-
+![Price Unique](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/price-unique.png?raw=true)
 Gambar 8. Harga tempat wisata
 
 ## Data Preparation
@@ -254,6 +254,7 @@ f(x) = \frac{x - min}{max - min}
   Setelah matriks didapat, top-n rekomendasi berdasarkan konten dapat diproses dengan menghitung kesamaan/_similarity_. Teknik menghitung kesamaan/_similarity_ yang akan digunakan yaitu _cosine similarity_.
   _Cosine Similarity_ adalah metrik yang digunakan untuk mengukur seberapa mirip dokumen terlepas dari ukurannya. Secara matematis, ini mengukur kosinus sudut antara dua vektor yang diproyeksikan dalam ruang multidimensi. [6] 
 
+  ![Cosine](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/cosine.jpg?raw=true)
   Gambar 9. _Cosine Similarity_
 
   **Kelebihan**:
@@ -317,6 +318,7 @@ Formula RMSE:
 \end{array}
 ```
 
+![Loss](https://github.com/sagungt/recommendation-system-tourism/blob/b8b612a3bcc09196ece2a7d459628fe890bd175c/img/loss.png?raw=true)
 Gambar 10. Hasil _test loss_ dan _validation loss_ dari model
 
 Hasil dari _test loss_ dan _validation loss_ terlihat ada _overfitting_. Untuk menghindari overfitting dalam _embedding_, salah satunya dengan menggunakan data pelatihan yang lebih lengkap, meningkatkan kompleksitas model, meningkatkan waktu pelatihan, hingga _cost function_ diminimalkan. Kumpulan data harus mencakup berbagai input yang diharapkan dapat ditangani oleh model. Data tambahan mungkin hanya berguna jika mencakup kasus baru dan menarik.
